@@ -168,22 +168,35 @@ export default class Timer extends Component {
 
     let start =
       minutes === 1 && seconds === 0 && !this.state.isOn ? (
-        <button onClick={this.startTimer}>start</button>
+        <button className="buttons" onClick={this.startTimer}>
+          start
+        </button>
       ) : null;
     let stop = this.state.isOn ? (
-      <button onClick={this.stopTimer}>stop</button>
+      <button className="buttons" onClick={this.stopTimer}>
+        stop
+      </button>
     ) : null;
     let reset =
       minutes !== 1 && seconds !== 0 && !this.state.isOn ? (
-        <button onClick={this.resetTimer}>reset</button>
+        <button className="buttons" onClick={this.resetTimer}>
+          reset
+        </button>
       ) : null;
     let resume =
       minutes !== 1 && seconds !== 0 && !this.state.isOn ? (
-        <button onClick={this.startTimer}>resume</button>
+        <button className="buttons" onClick={this.startTimer}>
+          resume
+        </button>
       ) : null;
     let end =
-      minutes === 0 && seconds === 0 && this.state.isOn
-        ? ((<button onClick={this.resetTimer}>start</button>),
+      // minutes === 0 && seconds === 0 &&
+      this.state.isOn
+        ? ((
+            <button className="buttons" onClick={this.resetTimer}>
+              start
+            </button>
+          ),
           console.log("hi"))
         : null;
 

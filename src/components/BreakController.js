@@ -18,10 +18,15 @@ export default class BreakController extends Component {
   render() {
     return (
       <div className="controller">
+        {/* <div> */}
         <p>BREAK</p>
-        <button onClick={this.handleBreakIncrement}> + </button>
+        <button className="buttons" onClick={this.handleBreakIncrement}>
+          +
+        </button>
         <span> {this.props.breakTime} </span>
-        <button onClick={this.handleBreakDecrement}> - </button>
+        <button className="buttons" onClick={this.handleBreakDecrement}>
+          -
+        </button>
       </div>
     );
   }

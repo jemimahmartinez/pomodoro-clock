@@ -18,10 +18,15 @@ export default class WorkController extends Component {
   render() {
     return (
       <div className="controller">
+        {/* <div> */}
         <p>SESSION</p>
-        <button onClick={this.handleWorkIncrement}> + </button>
+        <button className="buttons" onClick={this.handleWorkIncrement}>
+          +
+        </button>
         <span> {this.props.workTime} </span>
-        <button onClick={this.handleWorkDecrement}> - </button>
+        <button className="buttons" onClick={this.handleWorkDecrement}>
+          -
+        </button>
       </div>
     );
   }

@@ -34,15 +34,51 @@ h2 {
   font-family: monospace;
   color: #5e6472;
 }
+p {
+  display: center;
+  margin: 10px;
+}
 
-button {
-  color: #ffa69e;
+.buttons {
   background-color: #faf3dd;
-  border: none;
   font-size: 25px;
   font-family: monospace;
   text-align: center;
+  color: #ffa69e;
   display: center;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.buttons:hover {
+  background-color: #ffa69e;
+  color: #5e6472;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sound-button {
+  background-color: #faf3dd;
+  font-size: 25px;
+  font-family: monospace;
+  text-align: center;
+  color: #ffa69e;
+  display: center;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  height: 50px;
+}
+.sound-button:hover {
+  color: #5e6472;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .main {
@@ -51,6 +87,20 @@ button {
   font-size: 25px;
   font-family: monospace;
   text-align: center;
+  padding: 50px;
+  /* padding-left: 300px; */
+  /* display: inline-flex; */
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+body {
+  background-color: #faf3dd;
+}
+
+.right-side {
+  display: block;
 }
 
 /* .timer {
@@ -59,14 +109,14 @@ button {
   border-radius: 80px;
 } */
 
-/* .timer-controllers {
-  width: 500px;
-  margin: 25px 0px 75px 0px;
-  padding: 0;
-  position: flex-wrap;
+.timer-controllers {
+  padding: 10px;
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .controller {
-  width: 300px;
-  margin: 0;
-} */
+  width: 150px;
+  padding: 10px;
+  position: relative;
+}

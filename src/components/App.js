@@ -40,6 +40,7 @@ export default class App extends Component {
       breakTime: 5,
       sound: "on"
     };
+    this.state.currentTime = this.workTime;
   }
   setSound = sound => {
     this.setState({
@@ -125,29 +126,34 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="main">
+      <div>
         <h1> POMODORO CLOCK </h1>
-        <Timer
-          wrapper={ContainerWrapper}
-          // startTime={startTime}
-          // duration={duration}
-          // timeNow={timeNow}
-          showTimeInTitle={true}
-          handleBeforeUnload={true}
-        />
-        {/* <Timer currentTime={this.state.currentTime} /> */}
-        {/* <button onClick={this.startTimer(this.props.workTime)}>START</button> */}
-        {/* <button onClick={this.startTimer}>START</button> */}
-        {/* <button>STOP</button> */}
-        <TimerControllers
-          workTime={this.state.workTime}
-          breakTime={this.state.breakTime}
-          incrementWorkTime={this.incrementWorkTime}
-          decrementWorkTime={this.decrementWorkTime}
-          incrementBreakTime={this.incrementBreakTime}
-          decrementBreakTime={this.decrementBreakTime}
-        />
-        <Sound setSound={this.setSound} sound={this.state.sound} />
+        <div className="main">
+          <Timer
+            wrapper={ContainerWrapper}
+            // startTime={startTime}
+            // duration={duration}
+            // timeNow={timeNow}
+            showTimeInTitle={true}
+            handleBeforeUnload={true}
+          />
+          {/* <Timer currentTime={this.state.currentTime} /> */}
+          {/* <button onClick={this.startTimer(this.props.workTime)}>START</button> */}
+          {/* <button onClick={this.startTimer}>START</button> */}
+          {/* <button>STOP</button> */}
+          <div className="right-side">
+            <TimerControllers
+              workTime={this.state.workTime}
+              breakTime={this.state.breakTime}
+              incrementWorkTime={this.incrementWorkTime}
+              decrementWorkTime={this.decrementWorkTime}
+              incrementBreakTime={this.incrementBreakTime}
+              decrementBreakTime={this.decrementBreakTime}
+            />
+            <p></p>
+            <Sound setSound={this.setSound} sound={this.state.sound} />
+          </div>
+        </div>
       </div>
     );
   }
