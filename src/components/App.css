@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #0055ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  font-family: monospace;
+  color: #5e6472;
+}
+
+h2 {
+  font-size: 70px;
+  text-align: center;
+  font-family: monospace;
+  color: #5e6472;
+}
+
+button {
+  color: #ffa69e;
+  background-color: #faf3dd;
+  border: none;
+  font-size: 25px;
+  font-family: monospace;
+  text-align: center;
+  display: center;
+}
+
+.main {
+  background-color: #faf3dd;
+  color: #5e6472;
+  font-size: 25px;
+  font-family: monospace;
+  text-align: center;
+}
+
+/* .timer {
+  background-color: #faf3dd;
+  border: #09d3ac;
+  border-radius: 80px;
+} */
+
+/* .timer-controllers {
+  width: 500px;
+  margin: 25px 0px 75px 0px;
+  padding: 0;
+  position: flex-wrap;
+}
+
+.controller {
+  width: 300px;
+  margin: 0;
+} */
