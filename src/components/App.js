@@ -137,10 +137,6 @@ export default class App extends Component {
             showTimeInTitle={true}
             handleBeforeUnload={true}
           />
-          {/* <Timer currentTime={this.state.currentTime} /> */}
-          {/* <button onClick={this.startTimer(this.props.workTime)}>START</button> */}
-          {/* <button onClick={this.startTimer}>START</button> */}
-          {/* <button>STOP</button> */}
           <div className="right-side">
             <TimerControllers
               workTime={this.state.workTime}

@@ -46,8 +46,8 @@ p {
   text-align: center;
   color: #ffa69e;
   display: center;
-  padding: 5px;
-  margin: 5px;
+  padding: 10px;
+  margin: 10px;
   cursor: pointer;
   border: none;
 }
@@ -116,7 +116,7 @@ body {
 }
 
 .controller {
-  width: 150px;
+  width: 175px;
   padding: 10px;
   position: relative;
 }

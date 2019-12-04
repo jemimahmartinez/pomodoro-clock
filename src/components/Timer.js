@@ -106,7 +106,8 @@ export default class Timer extends Component {
     this.state = {
       minutes: 1,
       seconds: 0,
-      isOn: false
+      isOn: false,
+      cycle: "SESSION"
     };
     this.startTimer = this.startTimer.bind(this);
     this.stopTimer = this.stopTimer.bind(this);
@@ -134,6 +135,7 @@ export default class Timer extends Component {
         if (minutes === 0) {
           this.setState({ isOn: false });
           clearInterval(this.myInterval);
+          //here
         } else {
           this.setState(({ minutes }) => ({
             isOn: true,
@@ -141,13 +143,6 @@ export default class Timer extends Component {
             seconds: 59
           }));
         }
-        // }
-        // if (seconds === 0 && minutes !== 0) {
-        //   this.setState(({ minutes }) => ({
-        //     isOn: true,
-        //     minutes: minutes - 1,
-        //     seconds: 59
-        //   }));
       }
     }, 1000);
   }
@@ -190,15 +185,11 @@ export default class Timer extends Component {
         </button>
       ) : null;
     let end =
-      // minutes === 0 && seconds === 0 &&
-      this.state.isOn
-        ? ((
-            <button className="buttons" onClick={this.resetTimer}>
-              start
-            </button>
-          ),
-          console.log("hi"))
-        : null;
+      minutes === 0 && seconds === 0 && this.state.isOn ? (
+        <button className="buttons" onClick={this.resetTimer}>
+          start
+        </button>
+      ) : null;
 
     const renderContent = () => {
       const secondsPass = (this.state.minutes - 1) * 60 + this.state.seconds;
@@ -211,6 +202,7 @@ export default class Timer extends Component {
             <h2>
               {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
             </h2>
+            <span> {this.state.cycle} </span>
           </Circle>
         </React.Fragment>
       );
